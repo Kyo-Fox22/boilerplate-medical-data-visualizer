@@ -23,7 +23,7 @@ def draw_cat_plot():
     
 
     # 7
-    df_cat = df_cat.reset_index(name = 'total')
+    df_cat = df_cat.reset_index(name = 'total').sort_values(by = ['cardio','variable','value'])
 
     # 8
     fig = sns.catplot(df_cat, 
