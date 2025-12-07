@@ -23,7 +23,7 @@ def draw_cat_plot():
     
 
     # 7
-    df_cat = df_cat.reset_index(name = 'count')
+    df_cat = df_cat.reset_index(name = 'total')
 
     # 8
     fig = sns.catplot(df_cat, 
@@ -59,7 +59,7 @@ def draw_heat_map():
     fig, ax = plt.subplots(figsize = (12, 10))
 
     # 15
-    sns.heatmap(corr, mask = mask, annot = True, fmt = '.2f', ax = ax)
+    sns.heatmap(corr, mask = mask, annot = True, fmt = '.1f', ax = ax)
 
 
     # 16
